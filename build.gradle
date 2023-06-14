@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'com.homevision'
@@ -21,4 +22,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+ext {
+    javaMainClass = "com.homevision.Application"
+}
+
+application {
+    mainClassName = javaMainClass
 }
